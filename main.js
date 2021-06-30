@@ -48,17 +48,17 @@ function gotResult(error, results) {
         document.getElementById("result_gesture_name").innerHTML = results[0].label;
         prediction_1 = results[0].label;
         speak();
-        if(results[0].label == "")
+        if(results[0].label == "Class 1")
         {
-            document.getElementById("update_emoji").innerHTML = "&#128522;";
+            document.getElementById("update_gesture").innerHTML = "&";
         }
-        if(results[0].label == "sad")
+        if(results[0].label == "Class 2")
         {
-            document.getElementById("update_emoji").innerHTML = "&#128532;";
+            document.getElementById("update_gesture").innerHTML = "&#128532;";
         }
-        if(results[0].label == "angry")
+        if(results[0].label == "Class 3")
         {
-            document.getElementById("update_emoji").innerHTML = "&#128548;";
+            document.getElementById("update_gesture").innerHTML = "&#128548;";
         }
     }
 }
